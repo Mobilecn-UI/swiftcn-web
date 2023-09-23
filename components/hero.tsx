@@ -1,15 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowUpRight, SearchCheckIcon, SearchIcon } from "lucide-react";
 
 const Hero = () => {
+  const [following, setFollowing] = useState(true);
+
   return (
     <section className="">
-      {/* Relative container */}
       <div className="">
-        {/* Your existing content */}
         <div className="mt-5 flex flex-col items-center py-20 gap-6 text-center">
           <h1 className="flex flex-col md:flex-row text-5xl sm:text-4xl md:text-7xl font-bold justify-center text-center md:h-max">
             <span className="text-primary-500 leading-none tracking-tight bg-white bg-clip-text text-transparent ">
@@ -34,6 +36,72 @@ const Hero = () => {
               <span className="whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm lg:text-2xl font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent z-10">
                 Contribute
               </span>
+            </Button>
+          </div>
+        </div>
+
+        <div className="hidden md:flex flex-col items-center gap-6 text-center bg-transparent px-4 overflow-scroll">
+          {/* ... (existing content) ... */}
+          <div className="mt-10  flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
+            <div className="h-20 w-20 rounded-lg flex items-center justify-center mb-4 md:mb-0">
+              <Button className="">Button</Button>
+            </div>
+
+            <div className="rounded-lg flex items-center justify-center mb-4 md:mb-0">
+              <Image
+                src="https://avatars.githubusercontent.com/u/53033648?v=4"
+                alt="hero"
+                width={60}
+                height={60}
+                className="rounded-full"
+              />
+            </div>
+
+            <div className="w-full md:w-60 rounded-lg flex items-center justify-center mb-4 md:mb-0">
+              <div
+                className={`py-2 px-4 cursor-pointer font-semibold ${
+                  following
+                    ? "border-b-2 border-blue-400 text-blue-400"
+                    : "text-white"
+                }`}
+                onClick={() => setFollowing(true)}
+              >
+                Following
+              </div>
+              <div
+                className={`py-2 w-full px-4 cursor-pointer font-semibold ${
+                  !following
+                    ? "border-b-2 border-blue-400 text-blue-400"
+                    : "text-white"
+                }`}
+                onClick={() => setFollowing(false)}
+              >
+                For You
+              </div>
+            </div>
+
+            <div className="rounded-lg flex items-center justify-center mb-4 md:mb-0">
+              <Image
+                src="/robinhood.svg"
+                className="border-2 border-white rounded-xl"
+                alt="hero"
+                width={200}
+                height={200}
+              />
+            </div>
+
+            <div className="bg-white rounded-lg flex items-center justify-center shadow-md">
+              <SearchIcon className="w-8 h-8 text-black" />
+              <input
+                className="w-40 h-10 bg-transparent outline-none text-black placeholder-gray-400 pl-2"
+                disabled
+                placeholder="Search"
+              />
+            </div>
+
+            <Button className="mt-4 w-40 flex rounded-xl items-center justify-center shadow-2xl transition-all  hover:bg-gray-700">
+              See all
+              <ArrowUpRight />
             </Button>
           </div>
         </div>
