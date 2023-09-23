@@ -1,0 +1,60 @@
+{
+  "name": "SwiftCn UI",
+   "logo": {
+    "dark": "logo/logo-dark.png",
+    "light": "logo/logo-light.png"
+  },
+    "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#4ADE80",
+    "dark": "#166534"
+  },
+
+   "topbarLinks": [
+    {
+      "name": "Home",
+      "url": "github.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Contribute",
+    "url": "https://github.com/Swiftcn-UI/swiftcn-playground"
+  },
+  
+ 
+  "anchors": [
+    {
+      "name": "Components",
+      "icon": "rectangle-terminal",
+      "color": "#f59f0b",
+      "url": "button"
+    },
+    {
+      "name": "Github",
+      "icon": "github",
+      "color": "#2564eb",
+      "url": "https://github.com/Swiftcn-UI/swiftcn-playground"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["introduction"]
+    },
+
+    {
+    "group": "Components",
+    "pages" : ["button", "dotpattern"]
+    }
+   
+  ],
+  "footerSocials": {
+    "github": "https://github.com/Swiftcn-UI/swiftcn-playground"
+   
+  },
+  "integrations": {
+    "intercom": "abcdefz",
+    "frontchat": "abcdez"
+  }
+}
