@@ -1,0 +1,53 @@
+# CustomAvatar Component in SwiftUI
+
+## Overview
+
+`CustomAvatar` is a SwiftUI component designed to display user avatars. It supports both URL-based images and fallback text-based avatars. Customize the fallback background and foreground colors, as well as the dimensions of the avatar.
+
+## Preview
+
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <div style={{ marginRight: "40px" }}>
+    <img src="http://localhost:3000/avatar.png" width="80" />
+    <p>Avatar</p>
+  </div>
+  <div>
+    <img src="http://localhost:3000/avatarFallback.png" width="80" />
+    <p>Avatar with fallback text</p>
+  </div>
+</div>
+
+## Installation
+
+Include the `CustomAvatar.swift` file in your SwiftUI project.
+
+## Properties
+
+### Required Properties
+
+- `imageURL: String` - The URL of the image to display.
+- `fallbackText: String` - The text to display if the image loading fails.
+- `width: CGFloat` - The width of the avatar view.
+- `height: CGFloat` - The height of the avatar view.
+
+### Optional Properties
+
+- `fallbackBgColor: Color` - Background color for the fallback view. Default: `.black`.
+- `fallbackFgColor: Color` - Foreground color for the fallback text. Default: `.white`.
+
+## Usage
+
+### Basic Usage
+
+Here's how you can use the `CustomAvatar` component:
+
+```swift
+CustomAvatar(
+    imageURL: "https://example.com/image.jpg",
+    fallbackText: "JD",
+    fallbackBgColor: .blue,
+    fallbackFgColor: .white,
+    width: 100,
+    height: 100
+)
+```
