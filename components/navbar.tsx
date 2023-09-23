@@ -34,7 +34,7 @@ function Navbar() {
         <Link href="/" className="flex flex-row space-x-3">
           <Image src="/logo.svg" width={40} height={40} alt="SwiftCn" />
           <h1 className=" self-center text-4xl text-white font-extrabold whitespace-nowrap tracking-tighter cursor-pointer">
-            SwiftCn UI
+            Swiftcn UI
           </h1>
         </Link>
         <div className="flex items-center space-x-6">
