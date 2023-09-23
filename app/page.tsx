@@ -8,9 +8,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-
       <DotPattern className={cn("-z-10 bg-black")} />
-
       <Hero />
     </>
   );

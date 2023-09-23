@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "./ui/button";
 
 import { useEffect } from "react";
@@ -30,8 +31,9 @@ function Navbar() {
   return (
     <nav className="sticky w-screen top-0 z-50 py-3 md:py-7 font-poppins bg-transparent">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-        <Link href="/">
-          <h1 className="self-center text-4xl text-white font-extrabold whitespace-nowrap tracking-tighter cursor-pointer">
+        <Link href="/" className="flex flex-row space-x-3">
+          <Image src="/logo.svg" width={40} height={40} alt="SwiftCn" />
+          <h1 className=" self-center text-4xl text-white font-extrabold whitespace-nowrap tracking-tighter cursor-pointer">
             SwiftCn UI
           </h1>
         </Link>
