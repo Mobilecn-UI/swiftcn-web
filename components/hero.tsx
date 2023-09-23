@@ -21,6 +21,19 @@ const Hero = () => {
             Save time, reduce complexity, and create stunning iOS apps
             effortlessly.
           </p>
+          <div className="flex flex-col md:flex-row gap-4">
+            <Button className="mt-4 flex rounded-xl items-center justify-center shadow-2xl transition-all hover:bg-gray-700">
+              <span className="whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm lg:text-2xl font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent z-10">
+                All Components
+              </span>
+            </Button>
+
+            <Button className="mt-4 flex rounded-xl items-center justify-center shadow-2xl transition-all  hover:bg-gray-700">
+              <span className="whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm lg:text-2xl font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent z-10">
+                Contribute
+              </span>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
