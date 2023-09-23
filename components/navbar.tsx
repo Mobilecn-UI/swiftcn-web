@@ -39,12 +39,18 @@ function Navbar() {
         </Link>
         <div className="flex items-center space-x-6">
           <div>
-            <Link className="px-4  text-white  hover:text-gray-500" href={""}>
+            <Link
+              className="px-4  text-white  hover:text-gray-500"
+              href="https://swiftcn.mintlify.app/"
+            >
               Documentation
             </Link>
           </div>
           <div>
-            <Button className="px-4 bg-white text-black hover:shadow-lg hover:backdrop-blur-md  hover:bg-gray-300">
+            <Link
+              className="px-4 bg-white text-black hover:shadow-lg hover:backdrop-blur-md  hover:bg-gray-300"
+              href="https://github.com/Swiftcn-UI/swiftcn-playground"
+            >
               <Image
                 src="/github.svg"
                 width={20}
@@ -53,7 +59,7 @@ function Navbar() {
                 className="mr-3"
               />
               Github
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
