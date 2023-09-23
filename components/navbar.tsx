@@ -47,9 +47,11 @@ function Navbar() {
             </Link>
           </div>
           <div>
-            <Link
+            <Button
               className="px-4 bg-white text-black hover:shadow-lg hover:backdrop-blur-md  hover:bg-gray-300"
-              href="https://github.com/Swiftcn-UI/swiftcn-playground"
+              onClick={() => {
+                window.open("https://github.com/Swiftcn-UI/swiftcn-playground");
+              }}
             >
               <Image
                 src="/github.svg"
@@ -59,7 +61,7 @@ function Navbar() {
                 className="mr-3"
               />
               Github
-            </Link>
+            </Button>
           </div>
         </div>
       </div>
