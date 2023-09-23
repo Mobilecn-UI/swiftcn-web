@@ -45,6 +45,13 @@ function Navbar() {
           </div>
           <div>
             <Button className="px-4 bg-white text-black hover:shadow-lg hover:backdrop-blur-md  hover:bg-gray-300">
+              <Image
+                src="/github.svg"
+                width={20}
+                height={20}
+                alt="Github"
+                className="mr-3"
+              />
               Github
             </Button>
           </div>
