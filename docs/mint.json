@@ -45,7 +45,7 @@
 
     {
     "group": "Components",
-    "pages" : ["button", "avatar","tabs", "input", "toggle"]
+    "pages" : ["button", "avatar","tabs", "input", "toggle", "shimmerbutton"]
     },
 
     {
@@ -55,7 +55,7 @@
 
     {
       "group": "Examples",
-      "pages": ["all", "xclone"]
+      "pages": ["all", "xClone"]
     }
    
   ],
