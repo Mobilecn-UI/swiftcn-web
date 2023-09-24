@@ -1,0 +1,44 @@
+# CustomToggle Component in SwiftUI
+
+## Overview
+
+`CustomToggle` is a SwiftUI component designed for creating a customizable toggle switch with a label. This component takes advantage of SwiftUI's `ToggleStyle` to allow for a visually appealing and interactive experience.
+
+## Preview
+
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <div style={{ marginRight: "40px" }}>
+    <img src="https://www.swiftcn.lol/toggleOn.png" width="100" />
+    <p>Toggle On</p>
+  </div>
+  <div>
+    <img src="https://www.swiftcn.lol/toggleOff.png" width="100" />
+    <p>Toggle Off</p>
+  </div>
+</div>
+
+## Installation
+
+Include the `CustomToggle.swift` file in your SwiftUI project.
+
+## Properties
+
+### Required Properties
+
+- `label: String` - The label that appears next to the toggle.
+
+### State Variable
+
+- `state: Bool` - A state variable that tracks the on/off state of the toggle.
+
+## Usage
+
+### Basic Usage
+
+Here's how you can use the `CustomToggle` component:
+
+```swift
+CustomToggle(
+    label: "Toggle me"
+)
+```

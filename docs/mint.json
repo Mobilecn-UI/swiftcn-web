@@ -45,7 +45,12 @@
 
     {
     "group": "Components",
-    "pages" : ["button", "avatar","tabs", "input", "dotpattern"]
+    "pages" : ["button", "avatar","tabs", "input", "toggle"]
+    },
+
+    {
+      "group": "Patterns",
+      "pages": ["dotpattern"]
     }
    
   ],
