@@ -97,11 +97,12 @@ const Hero = () => {
                 placeholder="Search"
               />
             </div>
-
-            <Button className=" p-5 w-40 flex rounded-xl items-center justify-center shadow-2xl transition-all  hover:bg-gray-700">
-              See all
-              <ArrowUpRight />
-            </Button>
+            <Link href="https://swiftcn.mintlify.app/">
+              <Button className=" p-5 w-40 flex rounded-xl items-center justify-center shadow-2xl transition-all  hover:bg-gray-700">
+                See all
+                <ArrowUpRight />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
