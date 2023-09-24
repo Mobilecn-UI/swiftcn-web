@@ -51,6 +51,11 @@
     {
       "group": "Patterns",
       "pages": ["dotpattern"]
+    },
+
+    {
+      "group": "Examples",
+      "pages": ["all", "xclone"]
     }
    
   ],
