@@ -1,0 +1,49 @@
+# CustomTabs Component in SwiftUI
+
+## Overview
+
+`CustomTabs` is a SwiftUI component that provides a customizable tab navigation experience. It comes with an underline indicator to show the currently selected tab. This component is useful for scenarios where you want more control over the appearance and behavior of your tab navigation.
+
+## Preview
+
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <div>
+    <img src="www.swiftcn.lol/tabs.png" width="400" />
+
+  </div>
+</div>
+
+## Installation
+
+Include the `CustomTabs.swift` file in your SwiftUI project.
+
+## Properties
+
+### Required Properties
+
+- `selectedTab: Binding<String>` - A binding to the currently selected tab key.
+- `tabs: [(String, AnyView)]` - An array of tuples where the first element is the tab key and the second is the view to display when the tab is selected.
+
+### Optional Properties
+
+- `underlineColor: Color` - Color for the underline that indicates the currently selected tab. Default is `.white` (Note: This is not suitable for light mode).
+
+## Usage
+
+### Basic Usage
+
+Here's how you can use the `CustomTabs` component:
+
+```swift
+@State private var selectedTab: String = "Tab A"
+
+let tabs: [(String, AnyView)] = [
+    ("Tab A", AnyView(Text("Tab A content"))),
+    ("Tab B", AnyView(Text("Tab B content")))
+]
+
+CustomTabs(
+    selectedTab: $selectedTab,
+    tabs: tabs
+)
+```

@@ -1,15 +1,21 @@
----
-title: Button
-description: This page documents the Button component in the SwiftCn UI library.
----
+# CustomButton in SwiftUI
 
-# Button
+## Overview
 
-The Button is used to trigger an action or event.
+`CustomButton` is a SwiftUI component for creating a button with a custom style. It provides customization for the button's action and label while adapting to the current color scheme.
 
 ## Preview
 
-<img src="http://localhost:3000/dotpattern.png" width="80" />
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <div style={{ marginRight: "40px" }}>
+    <img src="www.swiftcn.lol/buttonLight.png" width="150" />
+    <p>Button (light mode)</p>
+  </div>
+  <div>
+    <img src="www.swiftcn.lol/buttonDark.png" width="150" />
+    <p>Button (dark mode)</p>
+  </div>
+</div>
 
 ## Installation
 
@@ -17,27 +23,19 @@ Include the `CustomButton.swift` file in your SwiftUI project.
 
 ## Properties
 
-- `width: CGFloat` - Width of the cell in the grid pattern.
-- `height: CGFloat` - Height of the cell in the grid pattern.
-- `x: CGFloat` - Horizontal offset for the grid.
-- `y: CGFloat` - Vertical offset for the grid.
-- `cx: CGFloat` - Horizontal center of the circle within the cell.
-- `cy: CGFloat` - Vertical center of the circle within the cell.
-- `cr: CGFloat` - Radius of the circle.
-- `dotColor: Color` - The color of the dots.
-- `spacing: CGFloat` - Additional spacing between dots.
+- `action: () -> Void` (Required) - The closure that gets called when the button is tapped.
+- `label: String` (Required) - The label displayed on the button.
+
+> **Note**: `fontWeight` is internally set to `.medium` as a default, and the color scheme is automatically detected.
 
 ## Usage
 
-To use this component, import it and include it in your SwiftUI view:
+### Basic Usage
 
-<CodeBlock language="swift">
-{`import YourSwiftCnUIPackage
+Here's how you can use the `CustomButton` component:
 
-struct ContentView: View {
-var body: some View {
-CustomButton()
-}
-}`}
-
-</CodeBlock>
+```swift
+CustomButton(action: {
+    print("Button tapped!")
+}, label: "Tap Me")
+```

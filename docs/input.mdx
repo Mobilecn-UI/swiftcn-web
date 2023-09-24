@@ -1,0 +1,54 @@
+# CustomInput Component in SwiftUI
+
+## Overview
+
+`CustomInput` is a SwiftUI component designed to create custom text input fields with optional icons and placeholders. This component is ideal for form elements and other data entry interfaces, providing a cohesive and visually appealing design.
+
+## Preview
+
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <div>
+    <img src="www.swiftcn.lol/input.png" width="300" />
+  </div>
+</div>
+
+## Installation
+
+Include the `CustomInput.swift` file in your SwiftUI project.
+
+## Properties
+
+### Required Properties
+
+- `text: Binding<String>` - A binding to the text that will be edited by the user in the input field.
+
+### Optional Properties
+
+- `iconName: String?` - The name of the system image to be displayed at the start of the input field. Default is `nil`.
+- `placeholder: String?` - The placeholder text to display when the input field is empty. Default is `nil`.
+
+## Usage
+
+### Basic Usage
+
+Here's how you can use the `CustomInput` component:
+
+```swift
+@State private var inputText: String = ""
+
+CustomInput(
+    text: $inputText
+)
+```
+
+### Usage with Icon and Placeholder
+
+```swift
+@State private var email: String = ""
+
+CustomInput(
+    text: $email,
+    iconName: "envelope",
+    placeholder: "Email"
+)
+```

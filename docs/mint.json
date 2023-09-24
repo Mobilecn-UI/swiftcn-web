@@ -45,7 +45,7 @@
 
     {
     "group": "Components",
-    "pages" : ["button", "avatar", "dotpattern"]
+    "pages" : ["button", "avatar","tabs", "input", "dotpattern"]
     }
    
   ],
