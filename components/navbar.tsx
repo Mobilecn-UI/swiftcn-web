@@ -43,6 +43,9 @@ function Navbar() {
             <Link
               className="px-4  text-white  hover:text-gray-500"
               href="https://swiftcn.mintlify.app/"
+              onClick={() => {
+                va.track("documentationClicked");
+              }}
             >
               Documentation
             </Link>

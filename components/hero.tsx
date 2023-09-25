@@ -28,7 +28,7 @@ const Hero = () => {
             <Button
               className="mirror-button mt-4 p-6 flex rounded-xl items-center justify-center shadow-2xl transition-all hover:bg-gray-700"
               onClick={() => {
-                va.track("documentationClicked");
+                va.track("allComponentsClicked");
 
                 window.open("https://swiftcn.mintlify.app/");
               }}
@@ -113,7 +113,7 @@ const Hero = () => {
             <Button
               className=" p-5 w-40 flex rounded-xl items-center justify-center shadow-2xl transition-all  hover:bg-gray-700"
               onClick={() => {
-                va.track("documentationClicked");
+                va.track("seeAllBtnClicked");
                 window.open("https://swiftcn.mintlify.app/button");
               }}
             >
