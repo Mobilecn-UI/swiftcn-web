@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, SearchCheckIcon, SearchIcon } from "lucide-react";
+import va from "@vercel/analytics";
 
 const Hero = () => {
   const [following, setFollowing] = useState(true);
@@ -24,15 +25,26 @@ const Hero = () => {
             effortlessly.
           </p>
           <div className="flex flex-col md:flex-row gap-4">
-            <Link href="https://swiftcn.mintlify.app/">
-              <Button className="mirror-button mt-4 p-6 flex rounded-xl items-center justify-center shadow-2xl transition-all hover:bg-gray-700">
-                <span className="relative whitespace-pre text-center text-sm lg:text-2xl font-semibold leading-none tracking-tight text-white z-10">
-                  All Components
-                </span>
-              </Button>
-            </Link>
+            <Button
+              className="mirror-button mt-4 p-6 flex rounded-xl items-center justify-center shadow-2xl transition-all hover:bg-gray-700"
+              onClick={() => {
+                va.track("documentationClicked");
+                console.log("documentationClicked");
+                window.open("https://swiftcn.mintlify.app/");
+              }}
+            >
+              <span className="relative whitespace-pre text-center text-sm lg:text-2xl font-semibold leading-none tracking-tight text-white z-10">
+                All Components
+              </span>
+            </Button>
 
-            <Button className="mt-4 flex rounded-xl p-6 items-center justify-center shadow-2xl transition-all  hover:bg-gray-700">
+            <Button
+              className="mt-4 flex rounded-xl p-6 items-center justify-center shadow-2xl transition-all  hover:bg-gray-700"
+              onClick={() => {
+                va.track("contributeClicked");
+                window.open("https://github.com/Swiftcn-UI/swiftcn-playground");
+              }}
+            >
               <span className="whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm lg:text-2xl font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent z-10">
                 Contribute
               </span>
@@ -97,12 +109,17 @@ const Hero = () => {
                 placeholder="Search"
               />
             </div>
-            <Link href="https://swiftcn.mintlify.app/">
-              <Button className=" p-5 w-40 flex rounded-xl items-center justify-center shadow-2xl transition-all  hover:bg-gray-700">
-                See all
-                <ArrowUpRight />
-              </Button>
-            </Link>
+
+            <Button
+              className=" p-5 w-40 flex rounded-xl items-center justify-center shadow-2xl transition-all  hover:bg-gray-700"
+              onClick={() => {
+                va.track("documentationClicked");
+                window.open("https://swiftcn.mintlify.app/button");
+              }}
+            >
+              See all
+              <ArrowUpRight />
+            </Button>
           </div>
         </div>
       </div>

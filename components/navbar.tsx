@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 
 import { useEffect } from "react";
+import va from "@vercel/analytics";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,7 @@ function Navbar() {
             <Button
               className="px-4 bg-white text-black hover:shadow-lg hover:backdrop-blur-md  hover:bg-gray-300"
               onClick={() => {
+                va.track("githubClicked");
                 window.open("https://github.com/Swiftcn-UI/swiftcn-playground");
               }}
             >
